@@ -19,7 +19,7 @@ void setup() {
 
 void loop() {
   lec=analogRead(0);
-  if(lec>=0 && lec<55){             // 5 Luces
+  if(lec>=0 && lec<200){             // 5 Luces
     delay(3000);
     for(int re=2; re<=6; re++){
       digitalWrite(re,HIGH);
@@ -29,15 +29,15 @@ void loop() {
     apaga();
     delay(3500);
   }
-  else if(lec>=55 && lec<110){     // Verde
+  else if(lec>=200 && lec<400){     // Verde
     digitalWrite(ve,HIGH);
     delay(3000);
   }
-  else if(lec>=110 && lec<165){    // Amarillo
+  else if(lec>=400 && lec<600){    // Amarillo
     digitalWrite(am,HIGH);
     delay(3000);
   }
-  else if(lec>=165 && lec<220){     // Rojo
+  else if(lec>=600 && lec<800){     // Rojo
     digitalWrite(ro,HIGH);
     delay(3000);
   }
